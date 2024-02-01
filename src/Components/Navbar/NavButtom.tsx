@@ -44,7 +44,7 @@ mx:'1em',
 alignItems: 'center',
 
 fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-About Us
+ABOUT US
 </Typography>
 </Link>
                 <Link className='black decor-none ' href={`/collection/products`}>
