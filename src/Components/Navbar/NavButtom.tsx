@@ -44,6 +44,19 @@ mx:'1em',
 alignItems: 'center',
 
 fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+About Us
+</Typography>
+</Link>
+                <Link className='black decor-none ' href={`/collection/products`}>
+
+<Typography 
+className=' cursor center flex gap1 black decor-none captialize'
+id="button"
+component='h1' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
 COLLECTION
 </Typography>
 </Link>

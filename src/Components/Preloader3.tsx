@@ -127,7 +127,7 @@ const Preloader3 = ({res}:{res:any}) => {
                                 sx={{color:'white',fontSize:{xs:'2.65em',sm:'3.1em',md:'3.15em',lg:'3em'},
                                 textTransform:'capitalize',
                                 fontWeight:900}}>
-                                {text('THE TASTE OF PURE AUTHENTIC HONEY WITH BEE ORGNAIC', 'استشعر قوة الطبيعة')}
+                                {text('THE TASTE OF PURE AUTHENTIC HONEY WITH BEE ORGANIC', 'استشعر قوة الطبيعة')}
                                 </Typography>
                                 <Typography 
                                 sx={{color:'white',fontSize:{xs:'.85em',sm:'.87em'},mt:1,maxWidth:'700px'}}>
