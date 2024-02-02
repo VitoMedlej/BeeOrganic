@@ -34,7 +34,7 @@ const NavButtom = () => {
                     Sale
                     </Typography>
                 </Link> */}
-                <Link className='black decor-none ' href={`/collection/products`}>
+                <Link className='black decor-none ' href={`/about`}>
 
 <Typography 
 className=' cursor center flex gap1 black decor-none captialize'
