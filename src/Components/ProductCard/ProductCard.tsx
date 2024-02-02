@@ -73,7 +73,7 @@ const ProductCard = ({
                     ? images[0]
                     : ''}
                     alt="Prdouct image"
-                    className="img contain"/>
+                    className="img "/>
             </Box>
             
             <Box 

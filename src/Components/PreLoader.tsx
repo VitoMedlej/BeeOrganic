@@ -14,6 +14,8 @@ import useLanguage from '@/Hooks/useLanguage'
 
 const 
 PreLoader = ({data,resImages}:any) => {
+  console.log('products: ', data);
+
   const router= useRouter();
   const {text} = useLanguage()
   const textsArray = [
