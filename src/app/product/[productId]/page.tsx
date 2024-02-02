@@ -18,6 +18,26 @@ import { QuantityPicker } from '@/Components/Shared/QuantityPicker/QuantityPicke
 import ProductOptionSelect from '@/Components/ProductOptionSelect/ProductOptionSelect'
 import SelectWeight from '@/Components/SelectWeight/SelectWeight'
 
+
+
+function parseSize(sizeStr: string): number | any {
+  let size: number | any;
+
+  if (sizeStr.endsWith('g')) {
+    // Remove the last character ('g') and parse the remaining string to a float
+    size = parseFloat(sizeStr.slice(0, -1));
+  } else {
+    // If the string doesn't end with 'g', parse it directly
+    size = parseFloat(sizeStr);
+  }
+
+  return size;
+}
+
+
+
+
+
 const Index = () => {
     const {productId} = useParams()
     const {incrementQty} = useCart()
@@ -35,8 +55,8 @@ const Index = () => {
       product : null,
       moreProducts : []
     })
-
-    
+    console.log('data?.product: ', data?.product);
+   
     
     const [selectedSize, setselectedSize] = useState({size:'',price:''});
     
@@ -71,7 +91,7 @@ const Index = () => {
         return  ()=> setLoading(false)
 
       }, [])
-
+      console.log('data?.product?.sizes ? data?.product?.sizes:  [{price:Number(data?.product?.price),size:`250`}]: ', data?.product?.sizes && data?.product?.sizes?.length > 0 ? data?.product?.sizes:  [{price:Number(data?.product?.price),size:`250`}]);
   return (
      
     
@@ -122,7 +142,11 @@ const Index = () => {
               <SelectWeight
               selectedSize={selectedSize  }
               setselectedSize={setselectedSize}
-              sizes={data?.product?.sizes ? data?.product?.sizes:  [{price:Number(data?.product?.price),size:parseFloat(data?.product?.size)}]}/>
+
+              sizes={data?.product?.sizes &&
+                 data?.product?.sizes?.length > 0
+                 ? data?.product?.sizes: 
+               [{price:Number(data?.product?.price),size:`${parseSize(data?.product?.size)}`}]}/>
      
              <Btn 
                      onClick={()=>addToCart(selectedQuantity,`${data?.product?._id}`,{title : data.product.title ,category: data.product.category,img:data.product.images[0], _id : data.product._id,price:selectedSize?.price ? selectedSize?.price : data?.product?.price, productselectedSize:selectedSize?.size,productselectedPrice:selectedSize?.price},true,true)}

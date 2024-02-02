@@ -9,6 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 export default function ProductCard({ setselectedSize, selectedSize, sizes }: any) {
   const [defaultSize, setDefaultSize] = useState<string>('');
+  console.log('defaultSize: ', defaultSize,sizes,selectedSize);
 
   useEffect(() => {
     // Set defaultSize to the size of the first element in sizes array
