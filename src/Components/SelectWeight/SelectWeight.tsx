@@ -25,7 +25,7 @@ export default function ProductCard({ setselectedSize, selectedSize, sizes }: an
     const option = sizes.find((option: any) => String(option.size) === String(weight));
     setselectedSize(option);
   };
-
+ 
   return (
     <Box className='flex items-center' sx={{ minWidth: { xs: 120, lg: 200 } }}>
       <FormControl fullWidth>

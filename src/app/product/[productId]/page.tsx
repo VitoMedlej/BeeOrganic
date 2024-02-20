@@ -19,7 +19,20 @@ import ProductOptionSelect from '@/Components/ProductOptionSelect/ProductOptionS
 import SelectWeight from '@/Components/SelectWeight/SelectWeight'
 
 
-
+function roundWeight(weight : any) {
+  if (weight % 100 === 0) {
+      // If weight is already a multiple of 100, return as is
+      return weight;
+  } else {
+      // Round to the nearest hundred
+      const rounded = Math.round(weight / 100) * 100;
+      // Check if rounding down is needed
+      if (weight % 100 === 50 && weight > rounded) {
+          return rounded + 50; // Round down for numbers ending in 50
+      }
+      return rounded;
+  }
+}
 function parseSize(sizeStr: string): number | any {
   let size: number | any;
 
@@ -31,7 +44,7 @@ function parseSize(sizeStr: string): number | any {
     size = parseFloat(sizeStr);
   }
 
-  return size;
+  return roundWeight(size);
 }
 
 

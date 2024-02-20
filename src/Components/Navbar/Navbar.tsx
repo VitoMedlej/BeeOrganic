@@ -54,6 +54,7 @@ export default function Navbar() {
      id='navy'
     className='center auto relative   bg flex'
         sx={{
+
             zIndex:12,
         flexWrap: 'wrap',
                 width:'100%',
