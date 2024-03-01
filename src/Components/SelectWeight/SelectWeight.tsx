@@ -40,7 +40,7 @@ export default function ProductCard({ setselectedSize, selectedSize, sizes }: an
         >
           {sizes && sizes?.map((option: any) => (
             <MenuItem key={option.size} value={String(option.size)}>
-              {String(option.size)}g
+              {option?.size}g
             </MenuItem>
           ))}
         </Select>
