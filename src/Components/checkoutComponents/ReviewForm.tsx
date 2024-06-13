@@ -94,6 +94,7 @@ export default function Review({setActiveStep}:{setActiveStep:any}) {
               isFirstOrder ? `10% discount off your first order!` : ''
             }
             </Typography>
+            
       </List>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>

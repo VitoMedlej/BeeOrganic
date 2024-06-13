@@ -66,6 +66,8 @@ const Cart = () => {
     const [cartItems,setCartItems] = useState<ICartItem[]>([])
     const total= totalCal(cartItems) || 0; 
     const {discountedPrice,isFirstOrder} = useDiscount(total)
+
+    
     let localCart : ICartItem[] = loadState('F5NX6214-HJN35I') || []
     useEffect(() => {
         if (localCart) {

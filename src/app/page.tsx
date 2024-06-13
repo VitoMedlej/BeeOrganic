@@ -7,8 +7,8 @@ import PreLoader from "@/Components/PreLoader"
 // import { Box,  Container, Typography } from "@mui/material"
 // import { useEffect, useState } from "react"
 // https://www..com/view_video.php?viewkey=ph637450f5f16fd
-// export default async function Home() {
-  export default async function Home() {
+export default async function Home() {
+  // export default async function Home() {
 //   const [data,setData] = useState< {
 //     products: IProduct[] | never[] ; 
 //     featuredProducts:IProduct[] | never[];
@@ -41,8 +41,8 @@ import PreLoader from "@/Components/PreLoader"
 try {
 
       // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ next: { revalidate: 10 } })
-    const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next:{revalidate:0} })
-    // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`)
+    // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next:{revalidate:0} })
+    const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`)
     let res = req &&  await req.json();
       // console.log('res: ', res);
       // const reqImages = await fetch(`https://getpantry.cloud/apiv1/pantry/732d3c8c-d53a-4c4c-830c-fe9b7e021958/basket/Images`,{  cache:'no-store', next: { revalidate: 400 } })
