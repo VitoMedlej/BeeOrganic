@@ -1,7 +1,6 @@
 "use client"
 import {Box, Grid, Typography} from "@mui/material"
 import CategoryItem from "./CategoryItem"
-import {useRef, useEffect} from "react";
 // import staticData from '../../staticData.json'
 
 const Category = () => {
